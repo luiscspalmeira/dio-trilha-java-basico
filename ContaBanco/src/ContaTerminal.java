@@ -20,9 +20,8 @@ public class ContaTerminal {
         Scanner teclado = new Scanner(System.in).useLocale(Locale.ENGLISH);
 
         System.out.println("Por favor, digite o número da conta !");
-        numero = teclado.nextInt();
+        numero = Integer.parseInt(teclado.nextLine());
         System.out.println("Por favor, digite o nome da agência !");
-        agencia = teclado.nextLine();
         agencia = teclado.nextLine();
         System.out.println("Por favor, digite o nome do cliente !");
         nomeCliente = teclado.nextLine();
@@ -31,6 +30,8 @@ public class ContaTerminal {
 
         System.out.print("Olá ".concat(nomeCliente).concat(", obrigado por criar uma conta em nosso banco, sua agência é ").concat(agencia));
         System.out.println(", conta "+numero+" e o seu saldo "+saldo+" já está disponível para saque.");
-        
+    
+        teclado.close();
+
     }
 }
